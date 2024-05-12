@@ -25,7 +25,7 @@ def testing_image(file_path, ulbmp_version, bpp_depth, rle):
         # To create a new file every iteration
         new_file += f"{i}"
     return [arithmetic_mean(load_exec_times), arithmetic_mean(saving_exec_times)]
-load_save_runtimes = testing_image(file_path="/Users/onur/Downloads/imgs/checkers4.ulbmp", ulbmp_version=4, bpp_depth=8, rle=True)
+load_save_runtimes = testing_image(file_path="/Users/onur/Downloads/imgs/checkers4.ulbmp", ulbmp_version=4, bpp_depth=24, rle=True)
 load_ms = load_save_runtimes[0] * 1000
 save_ms = load_save_runtimes[1] * 1000
 print(f"Average time to load an image: {load_ms} ms")
